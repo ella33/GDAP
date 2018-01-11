@@ -1,17 +1,26 @@
+import java.io.DataOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import com.google.protobuf.ByteString;
 
 import config.ServerConfiguration;
 import entities.Node;
+import entities.UploadRequest;
+import entities.Message;
 
-public class Server {
+public class NodeBL {
     private ServerSocket listeningSocket;
     private volatile boolean run = true;
     
-    public Server(int socketPort) throws IOException {
+    public NodeBL(int socketPort) throws IOException {
     	addShutdownHook();
         listenForRequests(socketPort);
     }
@@ -25,7 +34,12 @@ public class Server {
                     while (run) {
                         Socket acceptedConnection = listeningSocket.accept();
                         // create thread to deal with client
-                        new ClientThread(acceptedConnection).start();
+                        ClientThread ct = new ClientThread(acceptedConnection);
+                        ct.start();
+                        //ct.join();
+                        //Message response = Message.parseFrom(acceptedConnection.getInputStream());
+                        //System.out.println("here" + response.getUploadResponse().getFileInfo().getFilename());
+                        //acceptedConnection.close();
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -52,12 +66,20 @@ public class Server {
 		Node n = Node.newBuilder().setHost("127.0.0").setPort(5000).build(); 
 		System.out.println("Node: " + n.getHost() + n.getPort());
 		
-		new Server(ServerConfiguration.PORT_BASE);
+		byte[] data = Files.readAllBytes(new File("test.txt").toPath());
+		
+		UploadRequest ur = UploadRequest.newBuilder()
+				.setFilename("test.txt")
+				.setData(ByteString.copyFrom(data)).build();
+		Message msg = Message.newBuilder()
+                 .setType(Message.Type.UPLOAD_REQUEST)
+                 .setUploadRequest(ur)
+                 .build();
+		
+		new NodeBL(ServerConfiguration.PORT_BASE);
 		
 		Socket socket = new Socket(ServerConfiguration.HOST + '1', ServerConfiguration.PORT_BASE);
-		OutputStream out = socket.getOutputStream();
-		out.write("ABC\n".getBytes(), 0, 4);
-		out.close();
+		msg.writeTo(socket.getOutputStream());
 		socket.close();
 	}
 }
