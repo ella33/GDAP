@@ -1,0 +1,4 @@
+Python pyopencl mandelbrot example
+
+Requires python 3
+Run project using python3 mdb.py
