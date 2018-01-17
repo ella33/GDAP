@@ -1,0 +1,6 @@
+Python pyopencl mandelbrot example
+
+Requires python 3
+Run project using python3 mdb.py
+
+Copyrights: https://github.com/inducer/pyopencl/blob/master/examples/demo_mandelbrot.py
