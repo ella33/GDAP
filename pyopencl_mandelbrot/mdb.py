@@ -31,8 +31,8 @@ from six.moves import range
 # Speed notes are listed in the same place
 
 # set width and height of window, more pixels take longer to calculate
-w = 2048
-h = 2048
+w = 1024
+h = 1024
 
 
 def calc_fractal_opencl(q, maxiter):
@@ -147,10 +147,11 @@ if __name__ == '__main__':
             create the image from the draw() string
             """
             # you can experiment with these x and y ranges
-            self.draw(-2.13, 0.77, -1.3, 1.3)
+            self.draw(-4, 2.77, -6.3, 3.3)
             self.im = Image.fromarray(self.mandel)
-            self.im.putpalette([i for rgb in ((j, 0, 0) for j in range(255))
+            self.im.putpalette([i for rgb in ((0, j, j) for j in range(255))
                                 for i in rgb])
+            self.im.save("Mandelbrot_" + str(int(time.time())) + ".bmp")
 
         def create_label(self):
             # put the image on a label widget
