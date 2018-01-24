@@ -1,0 +1,744 @@
+########################################################################################################################
+Listening on 127.0.0.1:5002
+########################################################################################################################
+Listening on 127.0.0.1:5002
+2018/01/22 22:16:36 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/22 22:16:36 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+########################################################################################################################
+Listening on 127.0.0.1:5002
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:18:38 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:57 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:58 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:58 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:58 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:58 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:20:58 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:20:58 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:13 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:14 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:14 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:14 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:14 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/22 22:30:14 [1:2] Node 1:1 - torr: connection error SendRecv: dial tcp 127.0.0.1:5001: getsockopt: connection refused
+2018/01/22 22:30:14 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+########################################################################################################################
+Listening on 127.0.0.1:5002
+2018/01/24 19:50:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:50:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+2018/01/24 19:51:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:43954->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:43974->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:43964->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:43994->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:43984->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:43996->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44012->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44104->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44102->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44100->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44098->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44094->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44084->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44078->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44072->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44062->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44052->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44042->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44032->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44126->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44124->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44112->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44144->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44138->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44136->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44134->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44132->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44130->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44682->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44692->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 19:51:25 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 19:51:25 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:44702->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:02:51 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:02:51 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45356->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:02:51 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45346->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:02:51 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:02:51 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:02:51 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45366->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:02:51 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:02:51 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:02:51 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:02:51 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:02:51 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45396->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45386->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45406->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45416->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45432->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45442->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45454->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45466->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45482->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45500->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45492->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45506->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45502->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45508->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45504->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45512->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45514->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45516->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45518->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45526->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45548->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45530->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45532->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:45528->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:46068->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: read tcp 127.0.0.1:46080->127.0.0.1:5005: read: connection reset by peer
+2018/01/24 20:02:51 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:02:51 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:07:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:07:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:10:07 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:10:07 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:18:59 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:18:59 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:18:59 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:18:59 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:18:59 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:18:59 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:18:59 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:18:59 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:18:59 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:18:59 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:18:59 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:18:59 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:18:59 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:18:59 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:19:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:19:00 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:19:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:19:00 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:19:00 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:19:00 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:22:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:22:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:22:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:22:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:22:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:22:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:22:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:22:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:22:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:22:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:22:08 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:08 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:08 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:22:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:22:08 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:22:08 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:08 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 20:22:09 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 20:22:09 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+########################################################################################################################
+Listening on 127.0.0.1:5002
+2018/01/24 21:22:22 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 21:22:22 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 21:22:22 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 21:22:22 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 21:22:22 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 21:22:22 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 21:22:22 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 21:22:22 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 21:22:22 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 21:22:22 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 21:22:22 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 21:22:22 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 21:22:22 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 21:22:22 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
+2018/01/24 21:22:22 [1:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
+2018/01/24 21:22:22 [1:2] Node 1:5 - torr: connection error StubbornRead: EOF
