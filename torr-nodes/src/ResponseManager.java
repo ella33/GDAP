@@ -1,44 +1,32 @@
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.Socket;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-
+import java.util.Arrays;
+import java.util.List;
 import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.tools.ant.DirectoryScanner;
-
 import com.google.protobuf.ByteString;
-
 import config.ServerConfiguration;
 import entities.ChunkInfo;
+import entities.ChunkRequest;
+import entities.ChunkResponse;
 import entities.FileInfo;
-import entities.FileInfo.Builder;
 import entities.LocalSearchRequest;
 import entities.LocalSearchResponse;
-import entities.LocalSearchResponseOrBuilder;
 import entities.Message;
 import entities.Message.Type;
+import entities.Node;
+import entities.NodeReplicationStatus;
+import entities.ReplicateRequest;
+import entities.ReplicateResponse;
 import entities.Status;
 import entities.UploadRequest;
 import entities.UploadResponse;
 
 public class ResponseManager {
-	private Socket clientSocket;
 	private Message msg;
+	private Node node;
 
-    public ResponseManager(Message msg) {
+    public ResponseManager(Message msg, Node n) {
     	this.msg = msg;
+    	this.node = n;
     }
     
     public Message process() {
@@ -52,13 +40,13 @@ public class ResponseManager {
             	result = processUploadRequest(msg.getUploadRequest());
             }
             if (msg.hasChunkRequest()) {
-            	System.out.println("//TODO");
+            	result = processChunkRequest(msg.getChunkRequest());
             }
             if (msg.hasDownloadRequest()) {
             	System.out.println("//TODO");
             }
             if (msg.hasReplicateRequest()) {
-            	System.out.println("//TODO");
+            	result = processReplicateRequest(msg.getReplicateRequest());
             }
             if (msg.hasSearchRequest()) {
             	System.out.println("//TODO");
@@ -70,88 +58,146 @@ public class ResponseManager {
     }
     
     public Message processLocalSearchRequest(LocalSearchRequest lsr) throws IOException {
-    	DirectoryScanner scanner = new DirectoryScanner();
-    	scanner.setIncludes(new String[]{lsr.getRegex()});
-    	scanner.setBasedir("uploads");
-    	scanner.setCaseSensitive(false);
-    	scanner.scan();
-    	String[] files = scanner.getIncludedFiles();
-    	LocalSearchResponse.Builder b = LocalSearchResponse.newBuilder();
+    	String fileRegex = lsr.getRegex();
+    	String filename;
+    	int index = 0;
+    	LocalSearchResponse.Builder builder = LocalSearchResponse.newBuilder();
+    	List<FileInfo> files = ResourceManager.getFileInfos();
     	
-    	if (files.length > 0) {
-    		for (int i = 0; i < files.length; i++) {
-        		FileInfo fi = computeFileInfo(files[i]);
-        		b.setFileInfo(i, fi);
-        	}
+    	for (FileInfo fi : files) {
+    		filename = fi.getFilename();
+    		if (filename.matches(fileRegex)) {
+    			builder.setFileInfo(index, fi);
+    			index += 1;
+    		}
     	}
-    	b.setStatus(Status.SUCCESS);
+    	
+    	builder.setStatus(Status.SUCCESS);
     	Message m = Message.newBuilder()
     			.setType(Type.LOCAL_SEARCH_RESPONSE)
-    			.setLocalSearchResponse(b.build())
+    			.setLocalSearchResponse(builder.build())
     			.build();
     	return m;
     }
     
-    private FileInfo computeFileInfo(String filename) throws IOException {
+    private FileInfo computeFileInfo(byte[] data, String filename) {
     	int index = 0;
-    	FileInfo.Builder fi = FileInfo.newBuilder();
-    	ChunkInfo ci = computeChunk(filename, index); 
-    	while (ci != null) {
-    		fi.setChunks(index, ci);    		
-    		index += 1;
+    	FileInfo.Builder builder = FileInfo.newBuilder();
+    	FileInfo fi;
+    	ChunkInfo ci;
+    	int len = data.length;
+    	byte[] chunk;
+    	
+    	for (int i = 0; i < len - ServerConfiguration.DATA_CHUNK_SIZE + 1; i += ServerConfiguration.DATA_CHUNK_SIZE) {
+    	    chunk = Arrays.copyOfRange(data, i, i + ServerConfiguration.DATA_CHUNK_SIZE);
+    	    ci = ChunkInfo.newBuilder()
+    	    		.setIndex(index)
+	        		.setSize(ServerConfiguration.DATA_CHUNK_SIZE)
+	        		.setHash(ByteString.copyFrom(DigestUtils.md5(chunk)))
+	        		.build();
+    	    ResourceManager.addChunk(ci);
+    	    builder.addChunks(index, ci);
+    	    index += 1;
     	}
-    	Path fileLocation = Paths.get(filename);
-    	byte[] data = Files.readAllBytes(fileLocation);
-    	fi.setHash(ByteString.copyFrom(DigestUtils.md5(data)));
-    	fi.setSize(data.length);
-    	fi.setFilename(filename);
-    	return fi.build();
+
+    	if (len % ServerConfiguration.DATA_CHUNK_SIZE != 0) {
+    	    chunk = Arrays.copyOfRange(data, len - len % (ServerConfiguration.DATA_CHUNK_SIZE), len);
+    	    ci = ChunkInfo.newBuilder()
+    	    		.setIndex(index)
+	        		.setSize(chunk.length)
+	        		.setHash(ByteString.copyFrom(DigestUtils.md5(chunk)))
+	        		.build();
+    	    ResourceManager.addChunk(ci);
+    	    builder.addChunks(index, ci);
+    	}
+    	
+    	String fileHash = DigestUtils.md5(data).toString();
+    	builder.setHash(ByteString.copyFrom(DigestUtils.md5(data)));
+    	builder.setSize(data.length);
+    	builder.setFilename(filename);
+    	fi = builder.build();
+    	ResourceManager.addFileInfo(fi);
+    	ResourceManager.addFile(fileHash, data);
+    	return fi;
 	}
-    
-    private ChunkInfo computeChunk(String filename, int page) {
-    	ChunkInfo ci = null;
-    	try {
-    	    File file = new File(filename);
-    	    FileInputStream is = new FileInputStream(file);
-    	    byte[] chunk = new byte[ServerConfiguration.DATA_CHUNK_SIZE];
-    	    int chunkLen;
-    	    
-    	    if ((chunkLen = is.read(chunk, page * ServerConfiguration.DATA_CHUNK_SIZE, ServerConfiguration.DATA_CHUNK_SIZE)) != -1) {
-    	        ci = ChunkInfo.newBuilder()
-    	        		.setHash(ByteString.copyFrom(chunk))
-    	        		.setSize(chunkLen)
-    	        		.build();
-    	    }
-    	} catch (FileNotFoundException fnfE) {
-    	    fnfE.printStackTrace();
-    	} catch (IOException ioE) {
-    	    ioE.printStackTrace();
-    	}
-    	return ci;
-    }
-    
-    public Message processUploadRequest(UploadRequest ur) throws FileNotFoundException, IOException {
+
+    public Message processUploadRequest(UploadRequest ur) {
     	System.out.println("IN process upload");
     	String filename = ur.getFilename();
     	byte[] data = ur.getData().toByteArray();
-    	try (FileOutputStream fos = new FileOutputStream("uploads/" + filename)) {
-		   fos.write(data);
-		   fos.close();
-		   FileInfo fi = FileInfo.newBuilder()
-				   .setFilename(filename)
-				   .setSize(data.length)
-				   .build();
-		   UploadResponse uploadResponse = UploadResponse.newBuilder()
-				   .setStatus(Status.SUCCESS)
-				   .setFileInfo(fi)
-				   .build();
-		   Message m = Message.newBuilder()
-				   .setType(Type.UPLOAD_RESPONSE)
-				   .setUploadResponse(uploadResponse)
-				   .build();
-		   System.out.println(filename);
-		   return m;
-		}
+    	
+    	FileInfo fi = computeFileInfo(data, filename);
+		UploadResponse uploadResponse = UploadResponse.newBuilder()
+		   .setStatus(Status.SUCCESS)
+		   .setFileInfo(fi)
+		   .build();
+		Message m = Message.newBuilder()
+		   .setType(Type.UPLOAD_RESPONSE)
+		   .setUploadResponse(uploadResponse)
+		   .build();
+		System.out.println(filename);
+		return m;
+	}
+    
+    public Message processReplicateRequest(ReplicateRequest rr) {
+    	System.out.println("IN process replicate");
+    	ReplicateResponse.Builder builder = ReplicateResponse.newBuilder();
+    	NodeReplicationStatus nrs;
+    	List<FileInfo> files = ResourceManager.getFileInfos();
+    	String rrHash = rr.getFileInfo().getHash().toString();
+    	boolean found = false;
+    	int index = 0;
+    	for (FileInfo fi : files) {
+    		if (fi.getHash().toString().equals(rrHash)) {
+    			found = true;
+    			List<ChunkInfo> chunks = fi.getChunksList();
+    			for (ChunkInfo ci : chunks) {
+    				nrs = NodeReplicationStatus.newBuilder()
+    						.setNode(this.node)
+    						.setChunkIndex(ci.getIndex())
+    						.setStatus(Status.SUCCESS)
+    						.build();
+    				builder.addNodeStatusList(index, nrs);
+    				index += 1;
+    			}
+    			builder.setStatus(Status.SUCCESS);
+    		}
+    		if (found) break;
+    	}
+    	
+    	//Query other nodes for file
+    	if (!found) {
+    		 
+    	}
+    	
+    	return null;
+    }
+    
+    public Message processChunkRequest(ChunkRequest cr) {
+    	String crHash = cr.getFileHash().toString();
+    	ChunkResponse.Builder builder = ChunkResponse.newBuilder();
+    	
+    	if ((crHash.length() != 16) || (cr.getChunkIndex() < 0)) {
+    		builder.setStatus(Status.MESSAGE_ERROR);
+    	} else if (ResourceManager.getFiles().containsKey(crHash)) {
+    		byte[] fileData = ResourceManager.getFiles().get(crHash);
+    		byte[] chunkData;
+    		//if we have a full page to copy
+    		if ((cr.getChunkIndex() + 1) * ServerConfiguration.DATA_CHUNK_SIZE <= fileData.length) {
+    			chunkData = Arrays.copyOfRange(fileData, cr.getChunkIndex() * ServerConfiguration.DATA_CHUNK_SIZE, (cr.getChunkIndex() + 1) * ServerConfiguration.DATA_CHUNK_SIZE);
+    		} else {
+    			chunkData = Arrays.copyOfRange(fileData, cr.getChunkIndex() * ServerConfiguration.DATA_CHUNK_SIZE, fileData.length);
+    		}
+    		builder.setData(ByteString.copyFrom(chunkData));
+    		builder.setStatus(Status.SUCCESS);
+    	} else {
+    		builder.setStatus(Status.UNABLE_TO_COMPLETE);
+    	}
+    	return Message.newBuilder()
+    			.setType(Type.CHUNK_RESPONSE)
+    			.setChunkResponse(builder.build())
+    			.build();
     }
 }
+
 
