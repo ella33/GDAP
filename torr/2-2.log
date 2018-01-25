@@ -830,6 +830,7 @@ Listening on 127.0.0.2:5002
 2018/01/25 18:46:55 [2:2] Node 2:5 - torr: connection error SendRecv: dial tcp 127.0.0.2:5005: getsockopt: connection refused
 2018/01/25 18:46:55 [2:2] Node 2:4 - torr: connection error SendRecv: dial tcp 127.0.0.2:5004: getsockopt: connection refused
 2018/01/25 18:46:55 [2:2] Node 1:5 - torr: connection error StubbornRead: EOF
+<<<<<<< HEAD
 ########################################################################################################################
 Listening on 127.0.0.2:5002
 2018/01/25 22:16:01 [2:2] Node 1:4 - torr: connection error SendRecv: dial tcp 127.0.0.1:5004: getsockopt: connection refused
@@ -2468,3 +2469,5 @@ Listening on 127.0.0.2:5002
 2018/01/25 22:24:11 [2:2] Node 2:4 - torr: connection error SendRecv: dial tcp 127.0.0.2:5004: getsockopt: connection refused
 2018/01/25 22:24:11 [2:2] Node 2:5 - torr: connection error SendRecv: dial tcp 127.0.0.2:5005: getsockopt: connection refused
 2018/01/25 22:24:11 [2:2] Node 1:5 - torr: connection error SendRecv: dial tcp 127.0.0.1:5005: getsockopt: connection refused
+=======
+>>>>>>> d897925da33e176a79614f6854924e0273ad953b
