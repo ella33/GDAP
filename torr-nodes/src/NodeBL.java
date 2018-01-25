@@ -53,10 +53,10 @@ public class NodeBL {
                 System.out.println(response);
                 
                 byte[] m = response.toByteArray();
-                int l = m.length;
+                int mLen = m.length;
                 
                 DataOutputStream dout = new DataOutputStream(acceptedConnection.getOutputStream());
-                dout.writeInt(l);
+                dout.writeInt(mLen);
                 dout.write(m);
                 
                 acceptedConnection.close();
