@@ -31,7 +31,7 @@ public class NodeBL {
     	try {
     		String ip = ServerConfiguration.HOST + hs;
     		int port = ServerConfiguration.PORT_BASE + po;
-            listeningSocket = new ServerSocket(port, 50, InetAddress.getByName(ip));
+            listeningSocket = new ServerSocket(port, 100, InetAddress.getByName(ip));
             System.out.println("Will listen to host " + ip + " and port " + port);
             int n = 0;
             while (run) {
@@ -47,6 +47,13 @@ public class NodeBL {
                 ResponseManager rm = new ResponseManager(request);
                 Message response = rm.process();
                 System.out.println(response);
+                
+                byte[] m = response.toByteArray();
+                int l = m.length;
+                
+                DataOutputStream dout = new DataOutputStream(acceptedConnection.getOutputStream());
+                dout.writeInt(l);
+                dout.write(m);
                 
                 acceptedConnection.close();
             }
@@ -74,15 +81,6 @@ public class NodeBL {
 		System.out.println("Node: " + n.getHost() + n.getPort());
 		String hostSuffix = "1";
 		int portOffset = 5;
-		byte[] data = Files.readAllBytes(new File("test.txt").toPath());
-		
-		UploadRequest ur = UploadRequest.newBuilder()
-				.setFilename("test.txt")
-				.setData(ByteString.copyFrom(data)).build();
-		Message msg = Message.newBuilder()
-                 .setType(Message.Type.UPLOAD_REQUEST)
-                 .setUploadRequest(ur)
-                 .build();
 		if ((args.length > 0) && (args[1].equals("-hs"))) {
 			hostSuffix = args[2];
 		}
