@@ -1,4 +1,8 @@
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.Socket;
 import java.util.Arrays;
 import java.util.List;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -7,6 +11,8 @@ import config.ServerConfiguration;
 import entities.ChunkInfo;
 import entities.ChunkRequest;
 import entities.ChunkResponse;
+import entities.DownloadRequest;
+import entities.DownloadResponse;
 import entities.FileInfo;
 import entities.LocalSearchRequest;
 import entities.LocalSearchResponse;
@@ -14,8 +20,11 @@ import entities.Message;
 import entities.Message.Type;
 import entities.Node;
 import entities.NodeReplicationStatus;
+import entities.NodeSearchResult;
 import entities.ReplicateRequest;
 import entities.ReplicateResponse;
+import entities.SearchRequest;
+import entities.SearchResponse;
 import entities.Status;
 import entities.UploadRequest;
 import entities.UploadResponse;
@@ -110,13 +119,13 @@ public class ResponseManager {
     	    builder.addChunks(index, ci);
     	}
 
-    	String fileHash = DigestUtils.md5(data).toString();
+    	//String fileHash = DigestUtils.md5Hex(data);
     	builder.setHash(ByteString.copyFrom(DigestUtils.md5(data)));
     	builder.setSize(data.length);
     	builder.setFilename(filename);
     	fi = builder.build();
     	ResourceManager.addFileInfo(fi);
-    	ResourceManager.addFile(fileHash, data);
+    	ResourceManager.addFile(data);
     	return fi;
 	}
 
@@ -143,12 +152,12 @@ public class ResponseManager {
     	ReplicateResponse.Builder builder = ReplicateResponse.newBuilder();
     	NodeReplicationStatus nrs;
     	List<FileInfo> files = ResourceManager.getFileInfos();
-    	String rrHash = rr.getFileInfo().getHash().toString();
     	boolean found = false;
     	int index = 0;
     	for (FileInfo fi : files) {
-    		if (fi.getHash().toString().equals(rrHash)) {
+    		if (fi.getHash().equals(rr.getFileInfo().getHash())) {
     			found = true;
+    			System.out.println("FOUND LOCALLY");
     			List<ChunkInfo> chunks = fi.getChunksList();
     			for (ChunkInfo ci : chunks) {
     				nrs = NodeReplicationStatus.newBuilder()
@@ -166,14 +175,15 @@ public class ResponseManager {
 
     	//Query other nodes for file
     	if (!found) {
+   		   System.out.println("Query other nodes for file");
            Socket nodeConnection;
            Node node;
            DataOutputStream dout;
-           byte[] requestData, responseData;
+           byte[] requestData;
     	   int[] ipSuffixes  = ServerConfiguration.IP_SUFFIXES;
            int[] hostOffsets = ServerConfiguration.HOST_OFFSETS;
            List<ChunkInfo> chunks = rr.getFileInfo().getChunksList();
-           boolean found;
+           boolean foundChunk;
 
            for (ChunkInfo ci : chunks) {
                 ChunkRequest chr = ChunkRequest.newBuilder()
@@ -181,14 +191,20 @@ public class ResponseManager {
                     .setChunkIndex(ci.getIndex())
                     .build();
                 Message m = Message.newBuilder()
-                    .setType(TYPE.CHUNK_REQUEST)
+                    .setType(Type.CHUNK_REQUEST)
                     .setChunkRequest(chr)
                     .build();
                 requestData = m.toByteArray();
-                found = false;
+                foundChunk = false;
 
                 for (int is : ipSuffixes) {
+                    System.out.println("is "+is);
                     for (int ho : hostOffsets) {
+                        System.out.println("ho "+ho);
+                    	node = Node.newBuilder()
+                                .setHost(ServerConfiguration.HOST + is)
+                                .setPort(ServerConfiguration.PORT_BASE + ho)
+                                .build();
                         try {
                             nodeConnection = new Socket(InetAddress.getByName(ServerConfiguration.HOST + is), ServerConfiguration.PORT_BASE + ho);
                             dout = new DataOutputStream(nodeConnection.getOutputStream());
@@ -203,30 +219,32 @@ public class ResponseManager {
                             ChunkResponse cres = res.getChunkResponse();
 
                             //Found chunk
-                            if (cres.getStatus().toString().equals(Status.SUCCESS)) {
-                                node = Node.newBuilder()
-                                    .setHost(ServerConfiguration.HOST + is)
-                                    .setPort(ServerConfiguration.PORT_BASE + ho)
-                                    .build();
+                            if (cres.getStatus().equals(Status.SUCCESS)) {
+                            	System.out.println("found on node" + node);
                                 nrs = NodeReplicationStatus.newBuilder()
                                     .setNode(node)
                                     .setChunkIndex(ci.getIndex())
-                                    .setStatus(ci.getStatus())
+                                    .setStatus(Status.SUCCESS)
                                     .build();
                                 builder.addNodeStatusList(index, nrs);
                                 index += 1;
-                                found = true;
+                                foundChunk = true;
                             }
-                            if (found) break;
+                            if (foundChunk) break;
                         }
                         catch (IOException e) {
-                            System.out.println(e);
-                        }
-                        catch (UnknownHostException e) {
-                            System.out.println(e);
+                        	System.out.println("can not connect to " +node);
+                            nrs = NodeReplicationStatus.newBuilder()
+                                .setNode(node)
+                                .setStatus(Status.NETWORK_ERROR)
+                                .build();
+                            builder.addNodeStatusList(index, nrs);
+                            index += 1;
+                            //continue;
+                            
                         }
                     }
-                    if (found) {
+                    if (foundChunk) {
                         break;
                     } else {
                         builder.setStatus(Status.UNABLE_TO_COMPLETE);
@@ -242,13 +260,14 @@ public class ResponseManager {
     }
 
     public Message processChunkRequest(ChunkRequest cr) {
-    	String crHash = cr.getFileHash().toString();
+    	String crHash = cr.getFileHash().toStringUtf8();
+        System.out.println("request hash "+crHash);
     	ChunkResponse.Builder builder = ChunkResponse.newBuilder();
-
-    	if ((crHash.length() != 16) || (cr.getChunkIndex() < 0)) {
+        System.out.println("files "+ResourceManager.getFiles());
+        byte[] fileData = this.findFileDataByHash(cr.getFileHash());
+    	if ((cr.getChunkIndex() < 0)) {
     		builder.setStatus(Status.MESSAGE_ERROR);
-    	} else if (ResourceManager.getFiles().containsKey(crHash)) {
-    		byte[] fileData = ResourceManager.getFiles().get(crHash);
+    	} else if (fileData != null) {
     		byte[] chunkData;
     		//if we have a full page to copy
     		if ((cr.getChunkIndex() + 1) * ServerConfiguration.DATA_CHUNK_SIZE <= fileData.length) {
@@ -266,25 +285,33 @@ public class ResponseManager {
     			.setChunkResponse(builder.build())
     			.build();
     }
+    
+    private byte[] findFileDataByHash(ByteString hash) {
+    	List<byte[]> files = ResourceManager.getFiles();
+    	for (byte[] f : files) {
+    		ByteString bh = ByteString.copyFrom(DigestUtils.md5(f));
+    		if (bh.toStringUtf8().equals(hash.toStringUtf8())) {
+    			return f;
+    		}
+    	}
+    	return null;
+    }
 
-    public Message processSearchRequest(SearchRequest sr) {
-        String fileRegex = sr.getRegex();
-        String filename;
+    public Message processSearchRequest(SearchRequest sr) throws IOException {
         Message response;
         int index = 0;
         SearchResponse.Builder builder = SearchResponse.newBuilder();
-        List<FileInfo> files = ResourceManager.getFileInfos();
         Socket nodeConnection;
         Node node;
         DataOutputStream dout;
-        byte[] requestData, responseData;
+        byte[] requestData;
         int[] ipSuffixes  = ServerConfiguration.IP_SUFFIXES;
         int[] hostOffsets = ServerConfiguration.HOST_OFFSETS;
         LocalSearchRequest lsr = LocalSearchRequest.newBuilder()
             .setRegex(sr.getRegex())
             .build();
         Message m = Message.newBuilder()
-            .setType(TYPE.LOCAL_SEARCH_REQUEST)
+            .setType(Type.LOCAL_SEARCH_REQUEST)
             .setLocalSearchRequest(lsr)
             .build();
         requestData = m.toByteArray();
@@ -309,11 +336,11 @@ public class ResponseManager {
                         .setHost(ServerConfiguration.HOST + is)
                         .setPort(ServerConfiguration.PORT_BASE + ho)
                         .build();
-                    nsr = NodeSearchResult.newBuilder()
-                        .setNode(node)
-                        .setStatus(lsres.getStatus())
-                        .setFiles(lsres.fileInfo)
-                        .build();
+                    NodeSearchResult.Builder nsrb = NodeSearchResult.newBuilder();
+                    nsrb.setNode(node)
+                    	.addAllFiles(lsres.getFileInfoList())
+                    	.setStatus(lsres.getStatus());
+                    nsr = nsrb.build();
                     builder.addResults(index, nsr);
                     index += 1;
                     othersResponded = true;
@@ -321,43 +348,53 @@ public class ResponseManager {
                 catch (IOException e) {
                     System.out.println(e);
                 }
-                catch (UnknownHostException e) {
-                    System.out.println(e);
-                }
             }
         }
         if (!othersResponded) {
             response = processLocalSearchRequest(lsr);
-
+            NodeSearchResult.Builder nsrb = NodeSearchResult.newBuilder();
+            nsrb.setNode(this.node)
+            	.addAllFiles(response.getLocalSearchResponse().getFileInfoList())
+            	.setStatus(response.getLocalSearchResponse().getStatus());
+            nsr = nsrb.build();
+            builder.addResults(index, nsr);
         }
+        return Message.newBuilder()
+        		.setType(Type.SEARCH_RESPONSE)
+        		.setSearchResponse(builder.build())
+        		.build();
     }
 
     public Message processDownloadRequest(DownloadRequest dr) {
-        String drHash = dr.getHash().toString();
-
+        String drHash = dr.getFileHash().toString();
+        DownloadResponse dres = null;
+        byte[] fileData = this.findFileDataByHash(dr.getFileHash());
         if (drHash.length() < 16) {
-            return Message.newBuilder()
-                .setStatus(Status.MESSAGE_ERROR)
-                .build();
-        } else if (ResourceManager.getFiles().containsKey(drHash)) {
-            byte[] fileData = ResourceManager.getFiles().get(crHash);
-            DownloadResponse dres = DownloadResponse.newBuilder()
-                .setStatus(Status.SUCCESS)
-                .setData(fileData)
-                .build();
-            return Message.newBuilder()
+        	dres = DownloadResponse.newBuilder()
+                    .setStatus(Status.MESSAGE_ERROR)
+                    .build();
+            
+        } else if (fileData != null) {
+            dres = DownloadResponse.newBuilder()
+	                .setStatus(Status.SUCCESS)
+	                .setData(ByteString.copyFrom(fileData))
+	                .build();            
+        } else {
+        	dres = DownloadResponse.newBuilder()
+                    .setStatus(Status.UNABLE_TO_COMPLETE)
+                    .build();            
+        }
+        
+        if (dres == null) {
+        	dres = DownloadResponse.newBuilder()
+                    .setStatus(Status.PROCESSING_ERROR)
+                    .build();
+        }
+        
+        return Message.newBuilder()
                 .setType(Type.DOWNLOAD_RESPONSE)
                 .setDownloadResponse(dres)
                 .build();
-        } else {
-            return Message.newBuilder()
-                .setStatus(Type.UNABLE_TO_COMPLETE)
-                .build();
-        }
-
-        return Message.newBuilder()
-            .setStatus(Type.PROCESSING_ERROR)
-            .build();
     }
 }
 
