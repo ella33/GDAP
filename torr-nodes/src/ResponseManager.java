@@ -42,7 +42,7 @@ public class ResponseManager {
             	result = processChunkRequest(msg.getChunkRequest());
             }
             if (msg.hasDownloadRequest()) {
-            	System.out.println("//TODO");
+            	result = processDownloadRequest(msg.getDownloadRequest());
             }
             if (msg.hasReplicateRequest()) {
             	result = processReplicateRequest(msg.getReplicateRequest());
@@ -330,6 +330,34 @@ public class ResponseManager {
             response = processLocalSearchRequest(lsr);
 
         }
+    }
+
+    public Message processDownloadRequest(DownloadRequest dr) {
+        String drHash = dr.getHash().toString();
+
+        if (drHash.length() < 16) {
+            return Message.newBuilder()
+                .setStatus(Status.MESSAGE_ERROR)
+                .build();
+        } else if (ResourceManager.getFiles().containsKey(drHash)) {
+            byte[] fileData = ResourceManager.getFiles().get(crHash);
+            DownloadResponse dres = DownloadResponse.newBuilder()
+                .setStatus(Status.SUCCESS)
+                .setData(fileData)
+                .build();
+            return Message.newBuilder()
+                .setType(Type.DOWNLOAD_RESPONSE)
+                .setDownloadResponse(dres)
+                .build();
+        } else {
+            return Message.newBuilder()
+                .setStatus(Type.UNABLE_TO_COMPLETE)
+                .build();
+        }
+
+        return Message.newBuilder()
+            .setStatus(Type.PROCESSING_ERROR)
+            .build();
     }
 }
 
