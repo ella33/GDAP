@@ -15,6 +15,7 @@
 /home/ella/GDAP/torr-nodes/src/main/java/entities/UploadResponse.java
 /home/ella/GDAP/torr-nodes/src/main/java/entities/LocalSearchResponse.java
 /home/ella/GDAP/torr-nodes/src/main/java/entities/SearchRequestOrBuilder.java
+/home/ella/GDAP/torr-nodes/src/main/java/Helper.java
 /home/ella/GDAP/torr-nodes/src/main/java/entities/ChunkRequestOrBuilder.java
 /home/ella/GDAP/torr-nodes/src/main/java/config/ServerConfiguration.java
 /home/ella/GDAP/torr-nodes/src/main/java/entities/FileInfo.java

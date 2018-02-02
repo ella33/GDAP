@@ -1,0 +1,98 @@
+cudaMemcpy() - copierea incepe cand toate celelalte apeluri CUDA s-au finalizat; blocheaza CPU-ul pana cand copierea este completa.
+cudaMemcpyAsync() - asincron, nu blocheaza CPU
+cudaDeviceSynchronize() - blocheaza CPU pana cand toate apelurile CUDA precedente s-au completat.
+
+-apelurile CUDA API returneaza un cod de eroare (cudaError_t): poate fi eroare in apelul API sau intr-o operatie asincrona precedenta (kernel).
+cudaError_t cudaGetLatError(), char* cudaGetErrorString(cudaError_t)
+-interogare si selectare GPUs
+cudaGetDeviceCount(int *count)
+cudaSetDevice(int device)
+cudaGetDevice(int *device)
+cudaGetDeviceProperties(cudaDeviceProp *prop, int device)
+
+1. arhitecturi paralele (taxonomia lui Flynn)
+   Cea mai cunoscuta taxonomie, elaborata de Flynn in 1966. Clasificarea se face tinand cont de flux de date si fluxul de instructiuni. Se remarca 4 tipuri de sisteme de calcul.
+ 
+   SISD: calculatorul Von Neumann: fiecare instructiune aritmetica opereaza asupra unui element dintr-un set unic de date; exista un flux unic de date si un flux unic de instructiuni.
+   
+   SIMD: SC de tip vectorial in care toate PA executa aceeasi instructiune. Calculatoarele de tip SIMD au o singura unitate de procesare (Ucmd) si mai multe unitati de prelucrare (PA). Unitatea de comanda este cea care se ocupa de preluarea (fetch) si interpretarea instructiunilor. Atunci cand se intalneste o instructiune aritmetica sau o instructiune de prelucrare de date, aceasta trimite instructiunea la toate unitatile de prelucrare, care vor executa toate aceeasi operatie (evident asupra unor date diferite, proprii fiecarui procesor). Spre exemplu instructiunea ar putea fii: add R1,R2. Fiecare PA aduna continutul registrului propriu R2 la R1. Pentru a da o flexibilitate in implementarea algoritmilor, unul sau mai multe PA pot fi dezactivate prin folosirea de masti. Prin urmare, la fiecare instructiune un PA poate fi deactivat (caz in care nu face nimic), sau activ, ceea ce inseamna ca executa aceeasi operatie pe care o fac toate PA activate. Unul din avantajele acestui stil de organizare a unui calculator paralel este economisirea de “logica”. In general 20 pana la 50% din “logica” de pe un procesor obisnuit este folosita pentru control, mai exact, aducerea (fetch) decodarea si planificarea instructiunilor. Restul este folosita pentru registrii,pentru cache si pentru implementarea procesarii de date (sumatoare, multiplicatoare, etc). La SIMD, o singura unitate de comanda aduce (fetch) si proceseaza instructiuni, prin urmare mai multa “logica” poate fi folosita pentru circuitele aritmetice si registrii.
+
+	MISD: Sunt doar cateva masini in aceasta categorie, si nici una nu a avut un succes comercial, sau vreun impact din punct de vedere stiintific. Un sistem care intra in aceasta categorie (MISD) este un vector sistolic, care este o retea de mici elemente computationale conectate intr-o retea grila (grid). Toate elementele sunt controlate de un ceas global. La fiecare ciclu, un element va citi o valoare de la unul din vecini, efectueaza o operatie simpla (spre exemplu adunarea valorii sosite la la o valoare existenta deja) si pregateste o valoare spre a fi scrisa la un vecin la urmatorul pas.
+
+	MIMD: Aceasta categorie de calculatoare este cea mai diversificata dintre toate cele 4 categorii. Include masini cu procesoare si memorii proiectate special pentru arhitecturile paralele, masini paralele construite cu procesoare obisnuite conectate impreuna si altele. Odata cu imbunatatirea comunicarii pe retea si cu dezvoltarea softurilor care permit comunicatia intre calculatoare se poate considera ca o retea locala de calculatoare obisnuite intra in categoria masinilor MIMD.
+
+
+2. arhitectura GPU - memoria, core-uri
+   Procesorul grafic (GPU - graphics processing unit) reprezinta un circuit electronic specializat in crearea
+si manipularea imaginilor trimise catre o unitate de display (e.g. monitor). Termenul GPGPU (general
+purpose graphics processing unit) denota un procesor grafic cu o flexibilitate ridicata de programare,
+capabil de a rezolva si probleme generale. In executie, o arhitectura de tip GPU foloseste paradigma
+SIMD (single instruction multiple data, taxonomia Flynn), ceea ce presupune, schimb rapid de context
+intre thread-uri, planificarea in grupuri de thread-uri si orientare catre prelucrari masive de date.
+Procesorul grafic dispune si de un spatiu propriu de memorie (GPU dedicat → VRAM, GPU integrat →
+RAM).
+Unitatile tip GPU sunt potrivite pentru paralelismul de date, intensiv computationale. Datorita faptului
+ca aceleasi instructiuni sunt executate pentru fiecare element, nu sunt necesare mecanisme
+complexe pentru controlul fluxului. Ierarhia de memorie este mult simplificata comparativ cu cea a
+unui core de procesor x86/ARM. Deoarece calculele sunt intensive computational, latenta accesului la
+memorie poate fi ascunsa prin calcule in locul unor cache-uri mari pentru date.
+Nu orice algoritm paralel ruleaza optim pe o arhitectura GPGPU.
+In cele mai multe din cazuri, termenul de GPGPU apare atunci cand unitatea GPU este folosita ca si
+coprocesor matematic. In ziua de azi, majoritatea unitatilor de tip GPU sunt si GPGPU. In ultimii ani
+folosirea unitatilor GPGPU a luat amploare. Acest lucru se datoreaza:
+● diferentelor de putere de procesare bruta dintre CPU si GPU in favoarea acestora din urma
+● standardizarea de API-uri care usureaza munca programatorilor pentru a folosi GPU-ul
+● raspandirea aplicatiilor ce pot beneficia de pe urma paralelismului tip SIMD
+● regasirea unitatilor GPU atat in unitatile computationale consumer (PC, Smartphone, TV etc) cat si
+cele industriale (Automotive, HPC etc).
+Daca un IP de GPU este integrat pe aceeasi pastila de siliciu a unui SoC (system on chip), acesta se
+numeste GPU integrat (integrated GPU). Exemple de SoC-uri cu IP de GPU integrat includ procesoarele
+x86 Intel si Amd cat si majoritatea SoC-urilor pentru dispozitive mobile bazate pe arhitectura ARM (ex.
+Qualcomm Snapdragon). Un GPU integrat imparte mare parte din ierarhia de memorie cu alte IP-uri
+(ex core-uri ARM/x86, controller PCIe/USB/SATA/ETH). Pe de alta parte un GPU dedicat (discrete GPU)
+presupunea integrarea IP-ului de GPU pe o placa cu memorie dedicata (VRAM) cat si o magistrala
+PCIe/AGP8x/USB pentru comunicare cu sistemul. Exemple de GPU-uri dedicate sunt seriile de placi
+grafice Geforce (Nvidia) si Radeon (Amd).
+In cadrul unui sistem ce contine o unitate IP de tip GPU, procesorul general care coordoneaza executia
+este numit “HOST” (CPU) pe cand unitatea care efectueaza calculele este numita “DEVICE” (GPU). O unitate GPU contine un procesor de comanda (“command processor”) care citeste comenzile scrie de
+catre HOST (CPU) in anumite zone din RAM mapate spre access atat catre unitatea GPU cat si catre
+unitatea CPU. Toate schimbarile de stare in cadrul unui GPU, alocarile/transferurile de memorie si
+envenimentele ce tin de sistemul de operare sunt controlate de catre CPU (HOST).
+In general, o prelucrare de date folosind unitatea GPU, necesita in prealabil un transfer din spatiul de
+memorie de la CPU catre spatiul de memorie de la GPU. In cazul unui procesor grafic dedicat acest
+transfer se face printr-o magistrala (PCIe, AGP, USB…). Viteza de transfer RAM-VRAM via magistrala
+este inferioara vitezei RAM sau VRAM. O potentiala optimizare in transferul RAM↔VRAM ar fi
+intercalarea cu procesarea. In cazul unui procesor integrate transferul RAM↔VRAM presupune o
+mapare de memorie, de multe ori translatata printr-o operatie de tip zero copy.
+Programarea unui GPU se face printr-un API (Application Programming Interface). Cele mai cunoscute
+API-uri orientate catre folosirea unui GPU ca coprocesor matematic sunt: Cuda, OpenCL,
+DirectCompute, OpenACC, Vulkan
+
+Arhitectura NVIDIA CUDA
+Implementarea NVIDIA pentru GPGPU se numeste CUDA (Compute Unified Device Architecture) si
+permite utilizarea limbajului C pentru programarea pe GPU-urile proprii. Deoarece una din zonele tinta
+pentru CUDA este High Performance Computing, in care limbajul Fortran este foarte popular, PGI
+ofera un compilator de Fortran ce permite generarea de cod si pentru GPU-urile Nvidia. Exista
+binding-uri pana si pentru Java (jCuda), Python (PyCUDA) sau .NET (CUDA.NET).
+Framework-ul/arhitectura CUDA expune si API-ul de OpenCL prin intermediul caruia vom interactiona
+cu GPGPU-ul Nvidia Tesla disponibil pe ibm-dp.q.
+Arhitectura CUDA (toate GPU-urile, seriile Geforce (consumer), Tesla (HPC), Jetson (automotive)).
+Driver cu suport Windows, Linux, ce suporta atat CUDA API cat si OpenCL API.
+Framework/toolkit compilator cu suport CUDA/OpenCL API (nvcc), debugger/profiler (CUDA API only)
+Numeroase biblioteci si exemple CUDA/OpenCL API
+Unitatea de baza in cadrul arhitecturii CUDA este numita SM (Streaming Multiprocessor). Ea contine in
+functie de generatie un numar variabil de Cuda Cores sau SP (Stream Processors) - de regula intre
+8SP si 128SP. Unitatea de baza in scheduling este denumita “warp” si alcatuita din 32 de thread-uri.
+Vom aborda mai amanuntit arhitectura CUDA in laboratorul urmator. Ultima versiune de CUDA 8.5
+suport OpenCL 1.2
+
+Shared and global memory:
+The contents of global memory are visible to all the threads of grid. Any thread can read and write to any location of the global memory.
+
+Shared memory is separate for each block of the grid. Any thread of a block can read and write to the shared memory of that block. A thread in one block cannot access shared memory of another block.
+
+cudaMalloc always allocates global memory.
+Global memory resides on the device.
+Obviously, every memory has a size limit. The global memory is the total amount of DRAM of the GPU you are using. e.g I use GTX460M which has 1536 MB DRAM, therefore 1536 MB global memory. Shared memory is specified by the device architecture and is measured on per-block basis. Devices of compute capability 1.0 to 1.3 have 16 KB/Block, compute 2.0 to 7.0 have 48 KB/Block shared memory.
+Shared memory is magnitudes faster to access than global memory. Its like a local cache shared among the threads of a block.
+No. Only global memory addresses can be passed to a kernel launched from host. In your first example, the variable is read from the shared memory, while in the second one, it is read from the global memory. The use of shared memory is when you need to within a block of threads, reuse data already pulled or evaluated from global memory. So instead of pulling from global memory again, you put it in the shared memory for other threads within the same block to see and reuse.

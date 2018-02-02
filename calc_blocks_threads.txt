@@ -1,0 +1,31 @@
+In general you want to size your blocks/grid to match your data and simultaneously maximize occupancy, that is, how many threads are active at one time. The major factors influencing occupancy are shared memory usage, register usage, and thread block size.
+
+A CUDA enabled GPU has its processing capability split up into SMs (streaming multiprocessors), and the number of SMs depends on the actual card, but here we'll focus on a single SM for simplicity (they all behave the same). Each SM has a finite number of 32 bit registers, shared memory, a maximum number of active blocks, AND a maximum number of active threads. These numbers depend on the CC (compute capability) of your GPU and can be found in the middle of the Wikipedia article http://en.wikipedia.org/wiki/CUDA.
+
+First of all, your thread block size should always be a multiple of 32, because kernels issue instructions in warps (32 threads). For example, if you have a block size of 50 threads, the GPU will still issue commands to 64 threads and you'd just be wasting them.
+
+Second, before worrying about shared memory and registers, try to size your blocks based on the maximum numbers of threads and blocks that correspond to the compute capability of your card. Sometimes there are multiple ways to do this... for example, a CC 3.0 card each SM can have 16 active blocks and 2048 active threads. This means if you have 128 threads per block, you could fit 16 blocks in your SM before hitting the 2048 thread limit. If you use 256 threads, you can only fit 8, but you're still using all of the available threads and will still have full occupancy. However using 64 threads per block will only use 1024 threads when the 16 block limit is hit, so only 50% occupancy. If shared memory and register usage is not a bottleneck, this should be your main concern (other than your data dimensions).
+
+On the topic of your grid... the blocks in your grid are spread out over the SMs to start, and then the remaining blocks are placed into a pipeline. Blocks are moved into the SMs for processing as soon as there are enough resources in that SM to take the block. In other words, as blocks complete in an SM, new ones are moved in. You could make the argument that having smaller blocks (128 instead of 256 in the previous example) may complete faster since a particularly slow block will hog fewer resources, but this is very much dependent on the code.
+
+Regarding registers and shared memory, look at that next, as it may be limiting your occupancy. Shared memory is finite for a whole SM, so try to use it in an amount that allows as many blocks as possible to still fit on an SM. The same goes for register use. Again, these numbers depend on compute capability and can be found tabulated on the wikipedia page. Good luck!
+
+1D grids/blocks are suitable for 1D data, but higher
+dimensional grids/blocks are necessary for:
+• higher dimensional data.
+• data set larger than the hardware dimensional
+limitations of blocks.
+
+You also want the block to be a multiple of 32 (warp size) or you'll be wasting threads, and have if possible groups of 16 thread accessing consecutive memory for coalescing.
+
+
+
+On the other hand you want enough blocks to schedule over all the multi processors to fully utilize the card so you don't want the blocks too large if your problem is small
+
+
+
+I find that for 2D problems, having blocks of 16x16 or 16x12 or at the worst 16x8 do a good job
+
+
+
+

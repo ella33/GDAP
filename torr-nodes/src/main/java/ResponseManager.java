@@ -1,6 +1,4 @@
 package main.java;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
@@ -176,7 +174,6 @@ public class ResponseManager {
            Node node;
            String othersIp;
            int othersPort;
-           byte[] requestData;
     	   int[] ipSuffixes  = ServerConfiguration.IP_SUFFIXES;
            int[] hostOffsets = ServerConfiguration.HOST_OFFSETS;
            List<ChunkInfo> chunks = rr.getFileInfo().getChunksList();
@@ -191,7 +188,7 @@ public class ResponseManager {
                     .setType(Type.CHUNK_REQUEST)
                     .setChunkRequest(chr)
                     .build();
-                requestData = m.toByteArray();
+                
                 foundChunk = false;
 
                 for (int is : ipSuffixes) {
@@ -207,21 +204,13 @@ public class ResponseManager {
                                 .build();
                         try {
                         	Socket nodeConnection;
-                        	DataOutputStream dout;
-                        	
+                        	                   	
                             nodeConnection = new Socket(InetAddress.getByName(ServerConfiguration.HOST + is), ServerConfiguration.PORT_BASE + ho);
-                            dout = new DataOutputStream(nodeConnection.getOutputStream());
-                            dout.writeInt(requestData.length);
-                            dout.write(requestData);
 
-                            DataInputStream din = new DataInputStream(nodeConnection.getInputStream());
-                            int len = din.readInt();
-                            byte[] data = new byte[len];
-                            din.readFully(data);
-                            Message res = Message.parseFrom(data);
-                            ChunkResponse cres = res.getChunkResponse();
-                            din.close();
-                            dout.flush();  
+                            Helper.writeMessage(nodeConnection.getOutputStream(), m);                            
+                            Message res = Helper.readMessage(nodeConnection.getInputStream());
+                            ChunkResponse cres = res.getChunkResponse();                         
+                            
                             nodeConnection.close();
 
                             //Found chunk
@@ -311,8 +300,6 @@ public class ResponseManager {
         SearchResponse.Builder builder = SearchResponse.newBuilder();
         Socket nodeConnection;
         Node node;
-        DataOutputStream dout;
-        byte[] requestData;
         int[] ipSuffixes  = ServerConfiguration.IP_SUFFIXES;
         int[] hostOffsets = ServerConfiguration.HOST_OFFSETS;
         LocalSearchRequest lsr = LocalSearchRequest.newBuilder()
@@ -322,7 +309,6 @@ public class ResponseManager {
             .setType(Type.LOCAL_SEARCH_REQUEST)
             .setLocalSearchRequest(lsr)
             .build();
-        requestData = m.toByteArray();
         NodeSearchResult nsr;
         boolean othersResponded = false;
 
@@ -330,18 +316,9 @@ public class ResponseManager {
             for (int ho : hostOffsets) {
                 try {
                     nodeConnection = new Socket(InetAddress.getByName(ServerConfiguration.HOST + is), ServerConfiguration.PORT_BASE + ho);
-                    dout = new DataOutputStream(nodeConnection.getOutputStream());
-                    dout.writeInt(requestData.length);
-                    dout.write(requestData);
-
-                    DataInputStream din = new DataInputStream(nodeConnection.getInputStream());
-                    int len = din.readInt();
-                    byte[] data = new byte[len];
-                    din.readFully(data);
-                    dout.flush();
-                    din.close();                    
+                    Helper.writeMessage(nodeConnection.getOutputStream(), m);
+                    Message res = Helper.readMessage(nodeConnection.getInputStream());
                     nodeConnection.close();
-                    Message res = Message.parseFrom(data);
                     LocalSearchResponse lsres = res.getLocalSearchResponse();
                     node = Node.newBuilder()
                         .setHost(ServerConfiguration.HOST + is)

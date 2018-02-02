@@ -1,6 +1,5 @@
 package main.java;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
+
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
@@ -31,13 +30,10 @@ public class NodeBL {
 
             	new Thread() {
             		public void run() {
-            			DataInputStream din;
+            			
 						try {
-							din = new DataInputStream(acceptedConnection.getInputStream());
-							int len = din.readInt();
-	                        byte[] data = new byte[len];
-	                        din.readFully(data);
-	                        Message message = Message.parseFrom(data);
+							Message message = Helper.readMessage(acceptedConnection.getInputStream());
+							
 	                        Node node = Node.newBuilder()
 	                        		.setHost(ip)
 	                        		.setPort(port)
@@ -45,20 +41,10 @@ public class NodeBL {
 
 	                        ResponseManager rm = new ResponseManager(message, node);
 	                        Message response = rm.process();
-	                        System.out.println(response);
+	                        System.out.println("resonse " +response);
 
-	                        byte[] m = response.toByteArray();
-	                        int mLen = m.length;
+	                        Helper.writeMessage(acceptedConnection.getOutputStream(), response);
 	                        
-	                        System.out.println("res mlen " +mLen);
-	                        System.out.println("res m " +m);
-	                        DataOutputStream dout = new DataOutputStream(acceptedConnection.getOutputStream());
-	                        dout.writeInt(mLen);
-	                        dout.write(m);
-	                        
-	                        dout.flush();
-	                        dout.close();
-	                        din.close();
 	                        acceptedConnection.close();
 
 						} catch (IOException e) {
